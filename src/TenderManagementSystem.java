@@ -6,7 +6,7 @@ public class TenderManagementSystem {
 		
 		Athlete a1 = new Athlete ("Fabio", "Zeta", "Salti", 7.9);
 		Athlete a2 = new Athlete ("Carlo", "Tetti", "Salti", 7.6);
-		Athlete a3 = new Athlete ("Luigi", "Rossi", "Salti", 6.4 );
+		Athlete a3 = new Athlete ("Luigi", "Rossi", "Salti", 8.4 );
 		
 		Athlete[] list1 = new Athlete[3];
 		list1[0] =a1;
@@ -15,7 +15,7 @@ public class TenderManagementSystem {
 
 		Athlete a4 = new Athlete ("Mario", "Bianchi", "Corsa", 7.9);
 		Athlete a5 = new Athlete ("Riccardo", "Andrei", "Corsa", 8.3);
-		Athlete a6 = new Athlete ("Simone", "Lini", "Corsa", 7.1 );
+		Athlete a6 = new Athlete ("Simone", "Lini", "Corsa", 9.1 );
 		
 		Athlete[] list2 = new Athlete[3];
 		list2[0] =a4;
@@ -36,15 +36,13 @@ public class TenderManagementSystem {
 			cont++;
 		}
 		
-		double TimeWinner =list1[0].getTime();
 		Athlete winner=list1[0];
 		
 		for (int i=0;i<list1.length;i++)
 		{
-			if (list1[i].getTime()<TimeWinner);
+			if (list1[i].getTime()<winner.getTime())
 			{
-				TimeWinner=list1[i].getTime();
-				winner= list1[i];
+				winner=list1[i];
 			}
 		}
 		System.out.println(" ");
@@ -61,14 +59,12 @@ public class TenderManagementSystem {
 			cont2++;
 		}
 		
-		double TimeWinner2 =list2[0].getTime();
 		Athlete winner2=list2[0];
 		
 		for (int i=0;i<list2.length;i++)
 		{
-			if (list2[i].getTime()<TimeWinner2);
+			if (list2[i].getTime()<winner2.getTime())
 			{
-				TimeWinner2=list2[i].getTime();
 				winner2= list2[i];
 			}
 		}
